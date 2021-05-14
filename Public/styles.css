@@ -49,7 +49,7 @@
 .bankimage{
 
     width: 100%;
-    height: 100%;
+    height: auto
 }
 
 .image{
@@ -104,6 +104,15 @@
     margin-right: auto;
     width: 15%;
     margin-top: 20px;
+}
+
+.su{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    margin-top: 20px;
+
 }
       
 h3{
