@@ -6,7 +6,7 @@
  app.use(express.urlencoded({extended: true}));
  app.use(express.static("public"));
 
- mongoose.connect("mongodb+srv://admin-sourav:souravkumar@basic-banking-system.n8p1m.mongodb.net/CustomerDB", {useNewUrlParser: true, useUnifiedTopology: true});
+ mongoose.connect("mongodb+srv://admin-sourav:souravkumar@cluster0.n8p1m.mongodb.net/CustomerDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
  const CustomerSchema = new mongoose.Schema ({
      accountnumber : Number,
@@ -135,13 +135,10 @@ app.post("/transferhistoryinfo",(req,res) => {
   });
 });
 
- let port = process.env.PORT;
- if(port == null || port ==""){
-   port = 3000;
- }
 
 
-app.listen(port, function() {
+
+app.listen(process.env.PORT ||  3000, function() {
   console.log("Server started successfully");
 });
 
