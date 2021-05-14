@@ -1,10 +1,10 @@
-
+const path = require("path");
  const express = require("express");
  const mongoose = require("mongoose");
  const app = express();
  app.set('view engine', 'ejs');
  app.use(express.urlencoded({extended: true}));
- app.use(express.static("public"));
+ app.use(express.static(path.join(__dirname,'/Public')));
 
  mongoose.connect("mongodb+srv://admin-sourav:souravkumar@cluster0.n8p1m.mongodb.net/CustomerDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
